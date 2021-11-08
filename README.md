@@ -36,6 +36,7 @@ bin/logstash -f config/first-pipeline.conf --config.reload.automatic
 
 Filebeat commands :
 
+./filebeat -e -c itiobeat.yml -d "publish"
 
 
 steps for Setting up the Index template 
