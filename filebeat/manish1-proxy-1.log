@@ -1,0 +1,2 @@
+
+[2021-11-07T05:17:03.015Z] "POST /api/infra/graphql HTTP/2" 200 - via_upstream - "-" 1508 7205 207 205 "75.2.66.166" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Chrome/537.36" "82678341-39fc-99c8-a496-fca200b904ad" "manish-logs.manish.net" "11.244.1.151:5601" outbound|443||kibana.logging.svc.cluster.local 10.244.1.41:51252 255.244.0.43:8443 11.93.0.7:70945 manish-logs.manish.net -

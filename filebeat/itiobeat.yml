@@ -1,0 +1,18 @@
+filebeat.inputs:
+- type: log
+  paths:
+  - /Users/manish.kumar1/personal/code/istio/filebeat-manish/manish-proxy/manish1-proxy-1.log
+
+#output.elasticsearch:
+  #pipeline: "manish1-pipeline"
+  #hosts: ["localhost:9200"]
+  #index: "manish1-proxy-%{[agent.version]}-%{+yyyy.MM.dd}"
+
+output.logstash:
+  hosts: ["localhost:5044"]
+  
+#setup:
+  #template.enabled: false
+  #ilm.enabled: false
+  #template.name: "manish-istio-template"
+  #template.pattern: "istionew-proxy-*"
