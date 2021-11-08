@@ -587,4 +587,8 @@ it will expect your pattern should have the loction datatype as geo_point
 Close
 
 `
+now , we are good to go with maps in kibana
+
+please follow this link
+https://www.elastic.co/guide/en/kibana/current/maps-getting-started.html
 
