@@ -7,36 +7,46 @@ that's y I switched to earlier version of logstash.
 
 Elsticsearch deployement:
 Elastic:
-docker network create elastic
+
+`docker network create elastic
 docker pull docker.elastic.co/elasticsearch/elasticsearch:7.15.1
-docker run --name es01-test --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.15.1
+docker run --name es01-test --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.15.1`
 
 
 
 
 kibana :
 
+`
 docker pull docker.elastic.co/kibana/kibana:7.15.1
 docker run --name kib01-test --net elastic -p 5601:5601 -e "ELASTICSEARCH_HOSTS=http://es01-test:9200" docker.elastic.co/kibana/kibana:7.15.1
+`
+`
 
 docker stop es01-test
 docker stop kib01-test
+`
 
 To remove the containers and their network, run:
-
+`
 docker network rm elastic
 docker rm es01-test
 docker rm kib01-test
+`
+
 
 Logstash command :
 
+`
 bin/logstash -f config/first-pipeline.conf --config.test_and_exit
 bin/logstash -f config/first-pipeline.conf --config.reload.automatic
+`
 
 
 Filebeat commands :
-
+`
 ./filebeat -e -c itiobeat.yml -d "publish"
+`
 
 
 steps for Setting up the Index template 
